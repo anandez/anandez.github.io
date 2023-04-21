@@ -1,76 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My GitHub Pages Website</title>
-  <style>
-    /* Reset default margin and padding */
-    body, ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Set background color and font styles */
-    body {
-      background-color: #f8f8f8;
-      font-family: Arial, sans-serif;
-      color: #333;
-    }
-
-    /* Add padding and center content in the middle of the page */
-    .container {
-      max-width: 600px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-    }
-
-    /* Style the heading and paragraph */
-    h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-
-    /* Style the unordered list */
-    ul {
-      list-style-type: none;
-      padding-left: 20px;
-    }
-
-    /* Style the list items */
-    li {
-      font-size: 14px;
-      margin-bottom: 5px;
-    }
-
-    /* Add some spacing for the list items */
-    li:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    /* Style the closing paragraph */
-    .closing {
-      font-size: 12px;
-      color: #777;
-    }
-  </style>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to My GitHub Pages Website</h1>
-    <p>This is a simple example of an HTML file for GitHub Pages.</p>
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
-    <p class="closing">Thank you for visiting!</p>
-  </div>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>I am a web developer passionate about creating meaningful websites.</p>
+    <a href="#contact">Contact Me</a>
+  </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="profile.jpg" alt="Profile Picture">
+    <p>I am a web developer with experience in HTML, CSS, JavaScript, and various web frameworks.</p>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div>
+      <img src="project1.jpg" alt="Project 1">
+      <h3>Project 1</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div>
+      <img src="project2.jpg" alt="Project 2">
+      <h3>Project 2</h3>
+      <p>Praesent ac velit at elit finibus rutrum.</p>
+    </div>
+    <div>
+      <img src="project3.jpg" alt="Project 3">
+      <h3>Project 3</h3>
+      <p>Nam vulputate nisl a ligula faucibus convallis.</p>
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>I would love to hear from you! Feel free to contact me for any inquiries or collaborations.</p>
+    <form>
+      <input type="text" name="name" placeholder="Name">
+      <input type="email" name="email" placeholder="Email">
+      <textarea name="message" placeholder="Message"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </section>
 </body>
 </html>
