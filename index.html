@@ -1,72 +1,285 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>John Smith | Software Engineer</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anne Fernandez — CV</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fafaf8;
+      --text: #1a1a18;
+      --muted: #6b6b67;
+      --border: #e4e4e0;
+      --accent: #2563eb;
+      --font-body: 'Inter', system-ui, sans-serif;
+      --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap');
+
+    html { font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 400;
+      line-height: 1.7;
+      padding: 4rem 1.5rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .role {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.25rem;
+      font-size: 0.85rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    /* Sections */
+    section {
+      margin-bottom: 2.75rem;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* About */
+    .about-text {
+      font-size: 1rem;
+      color: var(--text);
+      max-width: 56ch;
+    }
+
+    /* Education & Experience entries */
+    .entry {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    .entry-sub {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    .entry-period {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      white-space: nowrap;
+      padding-top: 0.2rem;
+    }
+
+    .entry-desc {
+      grid-column: 1 / -1;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      max-width: 54ch;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-group-name {
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      background: var(--border);
+      color: var(--text);
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.78rem;
+      font-family: var(--font-mono);
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 2.5rem 1.25rem; }
+      .name { font-size: 1.6rem; }
+      .entry { grid-template-columns: 1fr; }
+      .entry-period { grid-row: 1; justify-self: start; }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1>John Smith</h1>
-    <h2>Software Engineer</h2>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1 class="name">Anne Fernandez</h1>
+    <p class="role">Software Engineer · Application Support</p>
+    <div class="contact">
+      <a href="mailto:anandez_mail@yahoo.com">anandez_mail@yahoo.com</a>
+      <a href="https://www.linkedin.com/in/annefernandezjkt/" target="_blank">linkedin.com/in/annefernandezjkt</a>
+      <span>Jakarta, Indonesia</span>
+    </div>
   </header>
-  <section id="hero">
-    <h2>Hello, I'm John</h2>
-    <p>A software engineer with a passion for building innovative solutions.</p>
-    <a href="#contact">Get in Touch</a>
+
+  <section>
+    <p class="section-label">About</p>
+    <p class="about-text">
+      Software Engineer with 10+ years of experience in Java development, Spring Boot, Microservices, Application Support, Production Support, SQL, and Enterprise Systems. Experienced in Financial Services and Warehouse Management System implementations. Proven track record in incident management, troubleshooting, release management, and supporting large-scale business applications. Strong understanding of Agile delivery, stakeholder management, and operational support.
+    </p>
   </section>
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="profile.jpg" alt="Profile Picture">
-    <p>I am a highly skilled software engineer with over 5 years of experience in developing web applications using modern technologies. I specialize in front-end development with expertise in JavaScript, React, and Angular frameworks.</p>
-  </section>
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Front-end Development (HTML, CSS, JavaScript)</li>
-      <li>React, Angular, Vue.js</li>
-      <li>Back-end Development (Node.js, Express)</li>
-      <li>Database (MongoDB, MySQL)</li>
-      <li>Version Control (Git)</li>
-      <li>Agile Development</li>
-    </ul>
-  </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <div>
-      <img src="project1.jpg" alt="Project 1">
-      <h3>Project 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+  <section>
+    <p class="section-label">Education</p>
+
+    <div class="entry">
+      <div>
+        <p class="entry-title">S.Kom</p>
+        <p class="entry-sub">Bunda Mulia University</p>
+      </div>
+      <p class="entry-period">2007 – 2011</p>
+      <p class="entry-desc">Graduated with IP 3.41. Thesis on Homeschooling Portal on eFront Community.</p>
     </div>
-    <div>
-      <img src="project2.jpg" alt="Project 2">
-      <h3>Project 2</h3>
-      <p>Praesent ac velit at elit finibus rutrum.</p>
+
+    <div class="entry">
+      <div>
+        <p class="entry-title">Professional Agile Leadership</p>
+        <p class="entry-sub">Scrum.org</p>
+      </div>
+      <p class="entry-period">2024</p>
     </div>
-    <div>
-      <img src="project3.jpg" alt="Project 3">
-      <h3>Project 3</h3>
-      <p>Nam vulputate nisl a ligula faucibus convallis.</p>
+
+  </section>
+
+  <section>
+    <p class="section-label">Skills</p>
+    <div class="skills-grid">
+
+      <div>
+        <p class="skill-group-name">Core Skills</p>
+        <div class="skill-tags">
+          <span class="tag">Java</span>
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Application Support</span>
+          <span class="tag">SQL</span>
+		  <span class="tag">Repository and Release Management</span>
+		  <span class="tag">Scrum</span>
+		  <span class="tag">Agile Methodology</span>
+		  <span class="tag">Oracle Forms & Reports</span>
+        </div>
+      </div>
+
     </div>
   </section>
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Want to discuss a project or have any questions? Feel free to reach out to me.</p>
-    <form>
-      <input type="text" name="name" placeholder="Name">
-      <input type="email" name="email" placeholder="Email">
-      <textarea name="message" placeholder="Message"></textarea>
-      <input type="submit" value="Submit">
-    </form>
+
+  <section>
+    <p class="section-label">Experience</p>
+
+    <div class="entry">
+      <div>
+        <p class="entry-title">Custom Software Engineering Senior Analyst</p>
+        <p class="entry-sub">Accenture Indonesia</p>
+      </div>
+      <p class="entry-period">2025 – present</p>
+      <p class="entry-desc">
+        Built and maintained core API services handling 50M+ monthly requests.
+        Led migration from monolith to microservices, reducing deploy time by 60%.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div>
+        <p class="entry-title">Junior Developer</p>
+        <p class="entry-sub">Another Company</p>
+      </div>
+      <p class="entry-period">2022 – 2023</p>
+      <p class="entry-desc">
+        Developed internal tooling for the data team and contributed to
+        the customer-facing dashboard using React and Django REST framework.
+      </p>
+    </div>
+
+    <div class="entry">
+      <div>
+        <p class="entry-title">Backend Intern</p>
+        <p class="entry-sub">Startup Name</p>
+      </div>
+      <p class="entry-period">Summer 2021</p>
+      <p class="entry-desc">
+        Wrote data pipeline scripts in Python and helped document REST APIs.
+      </p>
+    </div>
+
   </section>
+
+  <footer>
+    Last updated · July 2026
+  </footer>
+
 </body>
 </html>
